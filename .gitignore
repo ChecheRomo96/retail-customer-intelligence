@@ -1,0 +1,18 @@
+# Entorno local y cachés
+.venv/
+.mplconfig/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Datos y resultados reproducibles (no se publican)
+data/
+artifacts/
+reports/
+notebooks/executed/
+
+# Empaquetado y herramientas locales
+*.egg-info/
+graphify-out/
+
