@@ -1,6 +1,6 @@
 # Retail Customer Intelligence
 
-Seis notebooks para una demostración guiada de la materia **Explotación de Datos**. El objetivo es mostrar cómo un archivo de transacciones aparentemente utilizable se convierte, mediante decisiones de calidad, estructura y tiempo, en un resultado predictivo que puede apoyar una decisión.
+Seis notebooks para un caso guiado de la materia **Explotación de Datos**. El objetivo es mostrar cómo un archivo de transacciones aparentemente utilizable se convierte, mediante decisiones de calidad, estructura y tiempo, en un resultado predictivo que puede apoyar una decisión.
 
 ## Pregunta de negocio
 
@@ -8,7 +8,7 @@ En cada corte mensual, ordenar clientes por la probabilidad de que realicen una 
 
 El producto final es una lista priorizada para una campaña de retención. Las predicciones describen propensión; no prueban que una promoción cause una compra. Medir ese efecto requiere una prueba A/B posterior.
 
-## Recorrido de la demostración
+## Recorrido del caso
 
 | Notebook | Pregunta que responde | Por qué importa |
 |---|---|---|
@@ -19,7 +19,7 @@ El producto final es una lista priorizada para una campaña de retención. Las p
 | 05 | ¿Cómo se comporta el mismo modelo con perfiles procesados? | Evalúa ranking y revisa señales útiles. |
 | 06 | ¿Qué se puede entregar? | Compara sólo resultados válidos y exporta una lista revisable. |
 
-La demo incluye una variable de fuga creada expresamente. Debe producir una métrica casi perfecta y **debe rechazarse**: utiliza actividad posterior al corte. Es parte de la lección, no un modelo desplegable.
+El material incluye una variable de fuga creada expresamente. Debe producir una métrica casi perfecta y **debe rechazarse**: utiliza actividad posterior al corte. Es parte de la lección, no un modelo desplegable.
 
 ## Fuente pública
 
@@ -40,7 +40,6 @@ artifacts/         # Modelos serializados y predicciones.
 reports/           # Métricas, figuras y CSV final.
 notebooks/         # Los seis .ipynb finales.
 src/               # Lógica compartida y reproducible.
-scripts/           # Ejecución encadenada de los notebooks.
 ```
 
 ## Ejecución local
@@ -55,10 +54,6 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-La validación automatizada ejecuta los notebooks en orden, guarda una copia ejecutada en `notebooks/executed/` y falla ante cualquier excepción:
-
-```bash
-python scripts/execute_notebooks.py
-```
+Ejecuta los notebooks en orden numérico. El primero descarga la fuente pública y los siguientes reutilizan los archivos producidos por las etapas anteriores.
 
 La primera ejecución necesita internet únicamente para obtener la fuente pública; las posteriores reutilizan la caché local.

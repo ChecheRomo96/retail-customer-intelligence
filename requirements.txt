@@ -1,8 +1,6 @@
 # Entorno local para ejecutar y validar los seis notebooks.
 jupyterlab>=4.2,<5
 ipykernel>=6.29,<7
-nbclient>=0.10,<1
-nbformat>=5.10,<6
 # pandas 3.1 incorpora wheels compatibles con Python 3.14.
 pandas>=2.2,<3.2
 numpy>=1.26,<3

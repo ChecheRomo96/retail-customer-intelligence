@@ -1,4 +1,4 @@
-"""Lógica compartida para la demo guiada de Explotación de Datos."""
+"""Lógica compartida del caso guiado de Explotación de Datos."""
 from __future__ import annotations
 
 import json
